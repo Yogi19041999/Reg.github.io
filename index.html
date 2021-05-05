@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+   <style type="text/css">
+  .aa{
+      width: 300px;
+      height: 550px;
+      background-color: rgba(0,0,0,0.5);
+      margin:0 auto;
+      margin-top:40px;
+      padding-top: 10px;
+      padding-left:50px;
+      border-radius: 15px;
+      webkit-border-radius:15px;
+     -o-border-radius: 15px;
+     -moz-border-radius: 15px;
+     color:white; 
+     font-weight: bolder;
+     box-shadow:inset 4px 4px rgba(0,0,0,0.5)
+
+  }
+
+.aa input[type="text"]{
+     width: 200px;
+     height: 35px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+     padding-left: 5px;
+}
+.aa input[type="tel"]{
+     width: 200px;
+     height: 35px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+     padding-left: 5px;
+}
+
+
+.aa input[type="  Full name"]{
+     width: 200px;
+     height: 35px;
+     padding-left: 5px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+}
+
+.aa input[type="Email"]{
+     width: 200px;
+     height: 35px;
+     padding-left: 5px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+
+   
+}
+   
+.aa input[type="password"]{
+     width: 200px;
+     height: 35px;
+     padding-left: 5px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+}
+
+.aa input[type=" Re-enter password"]{
+     width: 200px;
+     height: 35px;
+     padding-left: 5px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+}
+
+.aa input[type="Mobile number"]{
+     width: 200px;
+     height: 35px;
+     padding-left: 5px;
+     border: 0;
+     border-radius:5px;
+      -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+}
+
+
+
+
+}
+.aa input[type="submit"]
+  width:100px;
+  height:35px:
+  border:0;
+  border-radius:5px;
+  -webkit-border-radius: 5px;
+      -0-border-radius: 5px;
+     -moz-border-radius:5px;
+  background color=skyblue;
+   font-weight:bolder;
+}
+
+
+
+
+
+</style>
+
+<script>
+function ValidateEmail(inputText)
+{
+	//var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	var mf=/^[^\s@]+@[^\s@]+$/;
+	console.log(inputText);
+	if(inputText.match(mf))
+	{
+		console.log("true");
+		document.getElementById("email_note").innerHTML="Valid email.";
+	}
+	else
+	{
+		console.log("False");
+		document.getElementById("email_note").innerHTML="Please Enter valid email.";
+	}
+}
+
+function ValidatePhone(inputText){}
+</script>
+
+ </head>
+  <body>
+<div class="aa">
+   <h2>REGISTRATION FORM</h2>
+   
+<form>
+
+ <input type="text" placeholder=" Enter Full Name....."><br><br>
+ <p id="email_note" name="to_display_Email_validation_note">email
+ </p>
+ <input type="text" autocomplete="off" placeholder=" Enter Your Email...." onkeyup="ValidateEmail(this.value)"><br><br>
+
+<input type="password" placeholder=" Enter Your Password...."><br><br>
+<input type="password" placeholder=" Re-enter your password...."><br><br>
+
+
+ <p id="phone_note" name="to_display_Phone_Code_area">phone
+ </p>
+<input type="tel" autocomplete="off" placeholder=" enter your mobile number...." id="phone" name="phone" pattern="\([0-9]{3}\)-[0-9]{3}-[0-9]{4}" required><br><br>
+<small>Format: (123)-45-678</small><br><br>
+<button><h5>
+<a href="ty.html">Submit</a></h5></button>
+
+ </form>
+ </div>
+</body>
+
+
+<!-- Styles -->	
+<style>
+body {
+  background-image: url("images/20.jpg");
+  background-position: 50% 50%;
+  background-repeat: repeat;
+}
+</style>
+</head>
+<body>
+
+</body>
+</html>

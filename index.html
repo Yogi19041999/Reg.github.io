@@ -123,23 +123,30 @@
 
 </style>
 
+
 <script>
 function ValidateEmail(inputText)
 {
 	//var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	var mf=/^[^\s@]+@[^\s@]+$/;
-	console.log(inputText);
-	if(inputText.match(mf))
-	{
-		console.log("true");
-		document.getElementById("email_note").innerHTML="Valid email.";
-	}
-	else
-	{
-		console.log("False");
-		document.getElementById("email_note").innerHTML="Please Enter valid email.";
-	}
-}
+	if(inputText.value.match(mailformat))
+
+      {
+          alert("valid email address!" ) ;
+         document.form1.text1.focus();
+         return true;       
+
+      }
+
+    else
+      {
+     alert("You have entered an invalid email address!");
+      document.form1.text1.focus();
+     return false;
+       }
+    
+ }
+
 
 function ValidatePhone(inputText){}
 </script>
@@ -149,23 +156,22 @@ function ValidatePhone(inputText){}
 <div class="aa">
    <h2>REGISTRATION FORM</h2>
    
-<form>
+<form action="ty.html">
 
- <input type="text" placeholder=" Enter Full Name....."><br><br>
+ <input type="text" placeholder=" Enter Full Name" required><br><br>
  <p id="email_note" name="to_display_Email_validation_note">email
  </p>
- <input type="text" autocomplete="off" placeholder=" Enter Your Email...." onkeyup="ValidateEmail(this.value)"><br><br>
+ <input type="text" autocomplete="off" placeholder=" Enter Your Email...." onkeyup="ValidateEmail(this.value)" required><br><br>
 
-<input type="password" placeholder=" Enter Your Password...."><br><br>
+<input type="password" placeholder=" Enter Your Password...."  required><br><br>
 <input type="password" placeholder=" Re-enter your password...."><br><br>
 
 
  <p id="phone_note" name="to_display_Phone_Code_area">phone
  </p>
-<input type="tel" autocomplete="off" placeholder=" enter your mobile number...." id="phone" name="phone" pattern="\([0-9]{3}\)-[0-9]{3}-[0-9]{4}" required><br><br>
-<small>Format: (123)-45-678</small><br><br>
-<button><h5>
-<a href="ty.html">Submit</a></h5></button>
+<input type="tel" autocomplete="off" placeholder=" enter your mobile number...." id="phone" name="phone" pattern="([0-9]{10})" required ><br><br>
+<small>Format: 123-456-789</small><br><br>
+<input type="submit" onclick="check(this.form)" value="Submit"<a href="ty.html"></a>
 
  </form>
  </div>
